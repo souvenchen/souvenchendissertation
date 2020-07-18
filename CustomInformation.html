@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" class="float-none">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Custom Information</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="form-validation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap">
+        <script>/* Pinegrow Interactions, do not remove */ try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id')?document.documentElement.hasAttribute('data-pg-mobile'):(screen.width<1000&&screen.height<1000)){pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}';}else{pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}';}style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}</script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.cookie.js"></script> 
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../sidebarstyle.css">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Introduction</a>
+            <h2>Create Your PIS</h2>
+            <ul>
+                <li><a href="CustomInformation.html">Custom Information</a></li>
+                <li><a href="DataInformation.html">Data Information</a></li>
+            </ul>
+            <a href="http://web.inf.ed.ac.uk/infweb/research/ethics-and-integrity/ethics-procedure" target="_blank">Ethics procedure</a>
+            <a href="PISTemplates.html">Original Templates</a>
+            <a href="Examples.html">More Examples</a>
+            <a href="javascript:history.go(-1)">Back to previous page</a>  
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <script type="text/javascript">
+            /*打开侧栏，修改侧栏宽度，主体左跨度、背景透明度*/
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                    document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+                }
+                /*关闭侧栏，恢复原始侧栏宽度，主体左跨度、背景透明度*/
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "auto";
+                document.body.style.backgroundColor = "white";
+                }
+            </script>
+             <script>
+                $(function(){
+                    $('.sidenav h2').on('click', function(){
+                        $(this).next('ul').toggleClass('active')
+                    })
+                })
+            </script>
+        <div id="main">
+            <div class="bg-white container w-75">
+                <img src="InformaticsUni_CMYK.png" width="600">
+                <div class="pb-0 pt-0 py-5 text-center" data-pg-ia="{&quot;l&quot;:[]}">
+                    <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5;">Custom field of Project</h2>
+                    <p class="font-weight-light lead text-justify text-white" style="border-left: 28px solid; border-right: 28px solid; background-color: rgba(255, 255, 255, 0); color: #000000;"><i class="font-italic text-muted">In this part, you need to fill in custom information about your project, such as <b>project title</b>, <b>research purpose, data storage</b>, etc. In addition, we provide <b>explanations and</b>&nbsp;<b>examples</b> for every question in the blank space for your reference. According to what you input, you can get some advice in how to improve or correct your answer.&nbsp;&nbsp;</i><br></p>
+                    <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5;">&nbsp; &nbsp;&nbsp;</h2>
+                    <div class="row w-100">
+                        <div class="border col-md-4 mb-4 order-md-2">
+                            <h4 class="d-flex justify-content-between align-items-center mb-3"> <span class="text-muted">Hints</span> </h4>
+                            <div class="alert alert-info alert-dismissable" id="alert_compensation" style="position: absolute;" data-pg-ia-hide> 
+                                <button type="button" class="close" onclick="$('#alert_compensation').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Commpensation</strong> includes any form economic benefit, including money, material goods, even soft dollar compensation(research services, software, clearing services, etc.).
+                            </div>      
+                            <div class="alert alert-info alert-dismissable" id="alert_benefit" style="position: absolute;" data-pg-ia-hide> 
+                                <button type="button" class="close" onclick="$('#alert_benefit').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Benefit</strong> means any form of compensation, e.g. pizza. Mention it if there do exist any compensation.
+                            </div>                   
+                            <div class="alert alert-info alert-dismissable" id="alert_yes_compensation" style="position: absolute;"> 
+                                <button type="button" class="close" onclick="$('#alert_yes_compensation').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Examples:</strong> 
+                                <p>Paid by money: “You will receive $9 as compensation for completing this survey, along with the knowledge that you have helped science and software engineering research.”</p>
+                            </div>                         
+                            <div class="alert alert-info alert-dismissable" id="alert_no_compensation" style="position: absolute;"> 
+                                <button type="button" class="close" onclick="$('#alert_no_compensation').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Examples:</strong> 
+                                <p>
+                “Subjects will not be compensated for participation in this study.”  </p>
+                            </div>                         
+                            <div class="alert alert-info alert-dismissable" id="alert_yes_benefit" style="position: absolute; text-align: left;"> 
+                                <button type="button" class="close" onclick="$('#alert_yes_benefit').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Attention:</strong> 
+                                Usually, the answer is no, but do mention if there’s any form of compensation, e.g. pizza
+                            </div>                         
+                            <div class="alert alert-info alert-dismissable" id="alert_no_benefit" style="position: absolute; text-align: left;"> 
+                                <button type="button" class="close" onclick="$('#alert_no_benefit').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Examples:</strong> 
+                                <li style="text-align: left;">You will receive no compensation for participating in this study other than the knowledge that you have helped in the creation of a website which can provide helpful information. </li>
+                                <li style="text-align: left;">People who participate in this study may have a better understanding of additional treatment methods that enable individuals to experience and increase their overall sense of wellbeing</li>
+                            </div>
+                            <div class="alert alert-info alert-dismissable" id="alert_risk" style="position: absolute; text-align: left;" data-pg-ia-hide> 
+                                <button type="button" class="close" onclick="$('#alert_risk').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Risks</strong> 
+                                <p style="text-align: left;">include information about physical and mental health, race, ethnicity, political opinions, religious beliefs, trade union membership, sexual orientation, genetic data, biometric data. </p>
+                                <p style="text-align: left;"><b>For  example:</b></p>
+                                <li style="text-align: left;">Physical risks</li>
+                                <li style="text-align: left;">Psychological risks</li>
+                                <li style="text-align: left;">Social/Economic risks</li>
+                                <li style="text-align: left;">Loss of Confidentiality</li>
+                                <li style="text-align: left;">Legal risks</li>
+                            </div>
+                            <div class="alert alert-info alert-dismissable" id="alert_yes_risk" style="position: absolute; text-align: left;"> 
+                                <button type="button" class="close" onclick="$('#alert_yes_risk').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Attentions:</strong> 
+                                <li style="text-align: left;">
+                                    In this section include any potential risk or discomforts, and how those risks will be addressed if they arise. If you believe there are no risks involved, since there is never a guarantee, state that there are “no known risks”. 
+    </li>
+                            </div>
+                            <div class="alert alert-dismissable alert-info text-left" id="alert_no_risk" style="position: absolute;"> 
+                                <button type="button" class="close" onclick="$('#alert_no_risk').hide();" aria-hidden="true">
+                                    &times;
+    </button>
+                                <strong>Examples:</strong> 
+                                <li style="text-align: center;" class="text-left">
+                                    There are no significant risks associated with participation. 
+    </li>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 order-md-1 text-left w-auto">
+                            <form class="needs-validation" novalidate="">
+                                <div class="mb-3">
+                                    <label for="compensation">
+                                        <span style="font-weight: normal;">1. Will people get </span>
+                                        <span style=""><i><u data-pg-ia='{"l":[{"t":"$#alert_compensation","a":"fadeIn","trg":"click"},{"trg":"mouseleave","t":"$#alert_compensation","a":"fadeOut"}]}'>compensation</u></i></span>
+                                        <span style="font-weight: normal;"> for participating in your project? </span>
+                                        <div class="audi_compensation" id="audi_compensation">
+                                            <div class="custom-control custom-radio w-25"> 
+                                                <input id="yes_compensation" name="compensationradio" type="radio" class="custom-control-input" value="1"> 
+                                                <label class="custom-control-label" for="yes_compensation" style="font-weight: normal;">Yes</label>                                             
+                                            </div>
+                                            <div class="custom-control custom-radio w-25"> 
+                                                <input id="no_compensation" name="compensationradio" type="radio" class="custom-control-input" value="2"> 
+                                                <label class="custom-control-label" for="no_compensation" style="font-weight: normal;">No</label>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="compensation_input" id="compensation_input">
+                                        <h5>Start your writing here:</h5>
+                                        <textarea cols="" id="compensation_text" class="w-100" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="mb-3" style="z-index: 0; position: sticky;">
+                                    <label for="benefit">
+                                        <span style="font-weight: normal;">2. Are there any </span>
+                                        <span style=""><i><u data-pg-ia='{"l":[{"t":"$#alert_benefit","a":"fadeIn","trg":"click"},{"trg":"mouseleave","t":"$#alert_benefit","a":"fadeOut"}]}'>benefits</u></i></span>
+                                        <span style="font-weight: normal;">associated with taking part?</span>
+                                        <div class="audi_benefit" id="audi_benefit">
+                                            <div class="custom-control custom-radio w-25"> 
+                                                <input id="yes_benefit" name="benefitradio" type="radio" class="custom-control-input" value="1"> 
+                                                <label class="custom-control-label" for="yes_benefit" style="font-weight: normal;">Yes</label>
+                                            </div>
+                                            <div class="custom-control custom-radio w-25"> 
+                                                <input id="no_benefit" name="benefitradio" type="radio" class="custom-control-input" value="2"> 
+                                                <label class="custom-control-label" for="no_benefit" style="font-weight: normal;">No</label>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="benefit_input" id="benefit_input">
+                                    <h5>Start your writing here:</h5>
+                                    <textarea cols="" id="benefit_text" class="w-100" rows="3"></textarea>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="risk">
+                                        <span style="font-weight: normal;">3. Are there any </span>
+                                        <span style=""><i><u data-pg-ia='{"l":[{"trg":"click","t":"$#alert_risk","a":"fadeIn"},{"trg":"mouseleave","t":"$#alert_risk","a":"fadeOut"}]}'>risks</u></i></span>
+                                        <span style="font-weight: normal;"> associated with taking part? </span>
+                                        <div class="audi_risk" id="audi_risk">
+                                            <div class="custom-control custom-radio w-25"> 
+                                                <input id="yes_risk" name="riskradio" type="radio" class="custom-control-input" value="1"> 
+                                                <label class="custom-control-label" for="yes_risk" style="font-weight: normal;">Yes</label>                                             
+                                            </div>
+                                            <div class="custom-control custom-radio w-25"> 
+                                                <input id="no_risk" name="riskradio" type="radio" class="custom-control-input" value="2"> 
+                                                <label class="custom-control-label" for="no_risk" style="font-weight: normal;">No</label>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="risk_input" id="risk_input">
+                                    <h5>Start your writing here:</h5>
+                                    <textarea cols="" id="risk_text" class="w-100" rows="3"></textarea>
+                                </div>
+                                <script>
+                                    // $("#alert_compensation").hide();
+                                    // $("#alert_risk").hide();
+                                    // $("#alert_benefit").hide();
+                                    $("#alert_yes_compensation").hide();
+                                    $("#alert_no_compensation").hide();
+                                    $("#compensation_input").hide();
+                                    $("#alert_yes_benefit").hide();
+                                    $("#alert_no_benefit").hide();
+                                    $("#benefit_input").hide();
+                                    $("#alert_yes_risk").hide();
+                                    $("#alert_no_risk").hide();
+                                    $("#risk_input").hide();
+                                    //$(".audi").change(function() {
+                                    $("#audi_compensation").change(function() {
+                                        var val = $('input:radio[name="compensationradio"]:checked').val();
+                                        console.log(val);
+                                        if(val == 1) {
+                                            $("#compensation_input").show();
+                                            $("#alert_yes_compensation").show();
+                                            $("#alert_no_compensation").hide();
+                                        } else if(val == 2) {
+                                            $("#compensation_input").hide();
+                                            $("#alert_no_compensation").show();
+                                            $("#alert_yes_compensation").hide();
+                                        }
+                                    })
+                                    //$(".audi").change(function() {
+                                    $("#audi_benefit").change(function() {
+                                        var val = $('input:radio[name="benefitradio"]:checked').val();
+                                        console.log(val);
+                                        if(val == 1) {
+                                            $("#benefit_input").show();
+                                            $("#alert_yes_benefit").show();
+                                            $("#alert_no_benefit").hide();
+                                        } else if(val == 2) {
+                                            $("#benefit_input").hide();
+                                            $("#alert_no_benefit").show();
+                                            $("#alert_yes_benefit").hide();
+                                        }
+                                    })
+                                    $("#audi_risk").change(function() {
+                                        var val = $('input:radio[name="riskradio"]:checked').val();
+                                        console.log(val);
+                                        if(val == 1) {
+                                            $("#risk_input").show();
+                                            $("#alert_yes_risk").show();
+                                            $("#alert_no_risk").hide();
+                                        } else if(val == 2) {
+                                            $("#risk_input").hide();
+                                            $("#alert_no_risk").show();
+                                            $("#alert_yes_risk").hide();
+                                        }
+                                    })
+                                </script>
+                            </form>
+                            <div class="mb-3">
+                                <label for="results">
+                                    <span style="font-weight: normal;">4. What will happen to the results of this study? </span>
+                                </label>
+                                <ul class="nav nav-tabs" role="tablist"> 
+                                    <li class="nav-item"> 
+                                        <a class="nav-link active" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true">Explanation</a> 
+                                    </li>                                 
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true">Examples</a> 
+                                    </li>                                 
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="active tab-pane" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
+                                        <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">In this part you need to describe what will happen with the results of this study. Based on the relevant information provided by the School of Informatics, you need to decide how long to keep the results of your research. The general default is to delete all relevant data, including various text records, audio and video, etc. within 2 years after the end of the study.</p>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
+                                        <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify"> 1. The results of this study may be summarised in coursework, published articles, reports and presentations. Quotes or key findings will be anonymized: we will remove any information that could, in our assessment, allow anyone to identify you. With your consent, information can also be used for future research. We will delete all audio and video recordings within 1 year of the end of the study. <br>
+    2. The results of this study may be summarised in published articles, reports and presentations. Quotes or key findings will be anonymized: We will remove any information that could, in our assessment, allow anyone to identify you. With your consent, information can also be used for future research. Your forwarded emails and archived data will be retained in the research inbox for a minimum of 2 years.</p>
+                                    </div>
+                                    <h5>Start your writing here:</h5>
+                                </div>
+                                <textarea cols="" rows="3" id="results" class="w-100"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="purposetab">
+                                    <span style="font-weight: normal;">5. What is the purpose of the study? </span>
+                                </label>
+                                <ul class="nav nav-tabs" role="tablist"> 
+                                    <li class="nav-item"> 
+                                        <a class="active nav-link" href="#purposetab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true">Explanation</a> 
+                                    </li>                                 
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" href="#purposetab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true">Examples</a> 
+                                    </li>                                 
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="active tab-pane" role="tabpanel" aria-labelledby="tab1-tab" id="purposetab1">
+                                        <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">This part includes a brief overview of the study on a level of understanding for the person who will be signing the form. Remember that the general population might not understand what you consider basic terminology. A general rule is to keep the wording at no more than an 8th grade reading level. <br>
+    In this part, the suggestion here is that you can briefly describe the motivation of your research. After that, describing the purpose of the study, for example, the purpose is to understand user needs or evaluate software performance.</p>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="purposetab2">
+                                        <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify"> 1. Malicious emails, such as phishing or scams, cause harm to the University through loss of account credentials, loss of data, or direct harm to staff and students through financial loss. This study aims to understand the types of malicious emails that University staff see regularly and find ways to better support groups like the Helpline in providing faster response to reported attacks. <br>
+                    2. Writing a participant information sheet, such as the one you are reading now, can be challenging for researchers, especially students who are still learning about consent and research ethics. The aim of this study is to identify challenges researchers face when writing participant information sheets and build a website that will help them. <br>
+                    3. We are studying the Unicorn+ app which allows users to create their own images of Unicorns easily and share them online. This study is conducted to evaluate the usability of the app so that we can improve its user interface design and allow people to make awesome Unicorn images with greater ease.</p>
+                                    </div>
+                                    <h5>Start your writing here:</h5>
+                                </div>
+                                <textarea cols="" rows="3" id="purpose" class="w-100"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reasontab">
+                                    <span style="font-weight: normal;">6. Why have participants been asked to take part?</span>
+                                </label>
+                                <ul class="nav nav-tabs" role="tablist"> 
+                                    <li class="nav-item"> 
+                                        <a class="nav-link active" href="#reasontab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true">Explanation</a> 
+                                    </li>                                 
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" href="#reasontab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true">Examples</a> 
+                                    </li>                                 
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="active tab-pane" role="tabpanel" aria-labelledby="tab1-tab" id="reasontab1">
+                                        <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">
+    This part needs you to explain specifically why the participant has been invited (e.g. because they have a specific condition, or because they are healthy individuals). It also make sense if you could state how many participants you are intending to involve and their characteristics (e.g. healthy volunteers, people with specific condition).<br>
+    In this part, what must have to be written here is an overview of what participant characteristics are needed for the study. It could be better to describe inclusion criteria, for example: participants has some motor ability in both hands and can verbally communicate. </p>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="reasontab2">
+                                        <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify"> 1. We are asking any University of Edinburgh staff and students who receive phishing emails to take part. <br>
+                    2. We are advertising the study to researchers with experience in writing participants information sheets and ethics panel members.  <br>
+                    3. We are advertising the study to people who are currently at University and are over 18 years old and are not currently using the Unicorn+ app. <br>
+                    4. We are asking people who has some motor ability in both hands and can verbally communicate. </p>
+                                    </div>
+                                    <h5>Start your writing here:</h5>
+                                </div>
+                                <textarea cols="" rows="3" id="reason" class="w-100"></textarea> 
+                            </div>
+                            <style type="text/css">textarea, .pg-node-id-1, .pg-file-cs-6 { border: 1px solid #a0b3d6; overflow: auto; min-height: 30px; max-height: 500px; padding: 0; outline: none; background-color: #fff; resize: none; margin-top: 0px; width: 708px; }</style>
+                            <script>
+                                var observe;
+                                if (window.attachEvent) {
+                                    observe = function (element, event, handler) {
+                                        element.attachEvent('on'+event, handler);
+                                    };
+                                }
+                                else {
+                                    observe = function (element, event, handler) {
+                                        element.addEventListener(event, handler, false);
+                                    };
+                                }
+                                function init () {
+                                    var text =document.getElementById('text');
+                                    function resize () {
+                                        text.style.height = 'auto';
+                                        var vHeight= text.scrollHeight + 2;
+                                        text.style.height =vHeight +'px';
+                                    }
+                                    /* 0-timeout to get the already changed text */
+                                    function delayedResize () {
+                                        window.setTimeout(resize, 0);
+                                    }
+                                    observe(text, 'change',  resize);
+                                    observe(text, 'cut',     delayedResize);
+                                    observe(text, 'paste',   delayedResize);
+                                    observe(text, 'drop',    delayedResize);
+                                    observe(text, 'keydown', delayedResize);
+
+                                    text.focus();
+                                    text.select();
+                                    resize();
+                                }
+                            </script>
+                        </div>
+                    </div>
+                
+                    <a class="btn btn-block btn-lg btn-primary float-right w-25" onclick="getvalue()" style="background-color: #18335c; font-family: 'Archivo Black', sans-serif; position: static;" href="DataInformation.html">NEXT PAGE</a>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="pgia/lib/pgia.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.cookie.js"></script> 
+            <script type="text/javascript">
+                function getvalue(){
+                  var str_result = $('#compensation_text').val();
+                  document.getElementById("compensation_text").innerHTML = str_result;
+                  $.cookie("compensation_cookie",document.getElementById("compensation_text").innerHTML); 
+
+                  var str_result = $('#benefit_text').val();
+                  document.getElementById("benefit_text").innerHTML = str_result;
+                  $.cookie("benefit_cookie",document.getElementById("benefit_text").innerHTML); 
+
+                  var str_result = $('#risk_text').val();
+                  document.getElementById("risk_text").innerHTML = str_result;
+                  $.cookie("risk_cookie",document.getElementById("risk_text").innerHTML); 
+
+                  var str_reason = $('#purpose').val();
+                  document.getElementById("purpose").innerHTML = str_reason;
+                  $.cookie("purpose_cookie",document.getElementById("purpose").innerHTML);
+
+                  var str_reason = $('#reason').val();
+                  document.getElementById("reason").innerHTML = str_reason;
+                  $.cookie("reason_cookie",document.getElementById("reason").innerHTML); 
+
+                  var str_result = $('#results').val();
+                  document.getElementById("results").innerHTML = str_result;
+                  $.cookie("result_cookie",document.getElementById("results").innerHTML); 
+                  
+                }
+                </script>
+    </body>
+</html>

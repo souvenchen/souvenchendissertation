@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en" class="float-none">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Data information</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="form-validation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap">
+        <script>/* Pinegrow Interactions, do not remove */ try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id')?document.documentElement.hasAttribute('data-pg-mobile'):(screen.width<1000&&screen.height<1000)){pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}';}else{pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}';}style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}</script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://code.changer.hk/jquery/plugins/jquery.cookie.js"></script>
+        <script type="text/javascript" src="./js/jquery.cookie.js"></script> 
+        <script> 
+            var compensation_content = $.cookie("compensation_cookie"),
+                benefit_content = $.cookie("benefit_cookie"),
+                risk_content = $.cookie("risk_cookie"),
+                purpose_content = $.cookie("purpose_cookie"),
+                reason_content = $.cookie("reason_cookie"),
+                result_content = $.cookie("result_cookie");
+
+            console.log(compensation_content); 
+            console.log(benefit_content); 
+            console.log(risk_content); 
+            console.log(purpose_content); 
+            console.log(reason_content); 
+            console.log(result_content); 
+        </script>
+        <script src="../jquery-3.5.1.js"></script>
+        <link rel="stylesheet" href="../sidebarstyle.css">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Introduction</a>
+            <h2>Create Your PIS</h2>
+            <ul>
+                <li><a href="CustomInformation.html">Custom Information</a></li>
+                <li><a href="DataInformation.html">Data Information</a></li>
+            </ul>
+            <a href="http://web.inf.ed.ac.uk/infweb/research/ethics-and-integrity/ethics-procedure" target="_blank">Ethics procedure</a>
+            <a href="PISTemplates.html">Original Templates</a>
+            <a href="Examples.html">More Examples</a>
+            <a href="javascript:history.go(-1)">Back to previous page</a>  
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <script type="text/javascript">
+        /*打开侧栏，修改侧栏宽度，主体左跨度、背景透明度*/
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+            }
+            /*关闭侧栏，恢复原始侧栏宽度，主体左跨度、背景透明度*/
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "auto";
+            document.body.style.backgroundColor = "white";
+            }
+        </script>
+         <script>
+            $(function(){
+                $('.sidenav h2').on('click', function(){
+                    $(this).next('ul').toggleClass('active')
+                })
+            })
+        </script>
+    <div id="main">
+        <div class="bg-white container w-75">
+            <img src="InformaticsUni_CMYK.png" width="600">
+            <div class="pb-0 pt-0 py-5 text-center" data-pg-ia="{&quot;l&quot;:[]}">
+                <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5;">Data information of Project</h2>
+                <p class="font-weight-light lead text-justify text-white" style="border-left: 28px solid; border-right: 28px solid; background-color: rgba(255, 255, 255, 0); color: #000000;"><i class="font-italic text-muted">In this part, there are several question and guidance to help you clarify how to deal with your<b> data </b>in your study. After checking all the questions and tips, you can answer the PIS question<b> &ldquo;</b><b>What will happen if people decide to take part&rdquo;</b> more easily. You can enter your answer in the text area below or you can edit the downloadable Latex file provided.&nbsp;</i><br></p>
+                <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5;">&nbsp; &nbsp;&nbsp;</h2>
+                <div class="row w-100">
+                    <div class="border col-md-4 mb-4 order-md-2">
+                        <h4 class="align-items-center d-flex justify-content-between mb-3"> <span class="text-muted">Hints</span> </h4>
+                        <div class="alert alert-dismissable alert-info" id="alert_personal" style="position: absolute; text-align: left; z-index:4;" data-pg-ia-hide>
+                            <button type="button" class="close" onclick="$('#alert_personal').hide();" aria-hidden="true">
+                                ×
+</button>
+                            <strong>Personal data</strong>&nbsp;are data relating to living individuals, whether hard or soft copy, as long as you have some means of identifying the individuals. In research this could be:
+                            <li>
+                                <b>Names, contact details, other factual information&nbsp;</b>
+                            </li>                             
+                            <li>
+                                <b>Answers to questions</b>, for example in questionnaires or interviews, whether factual or the participant&apos;s opinion
+                            </li>                             
+                            <li>
+                                <b>Photographs, film, video, audio, transcripts of interviews</b> etc.
+                            </li>                             
+                            <li>
+                                <b>Human biological material,</b> e.g. blood, tissue, when linked to an identifier such as CHI number, name etc.
+                            </li>                             
+                            <li>
+                                <b>Test results</b> e.g. heart rate, blood pressure, when linked to an identifier such as CHI number, name etc.
+                            </li>
+                        </div>                         
+                        <div class="alert alert-dismissable alert-info" id="alert_yes_personal" style="position: absolute; text-align: left; white-space: normal; letter-spacing: 0px;z-index:3;"> 
+                            <button type="button" class="close" onclick="$('#alert_yes_personal').hide();" aria-hidden="true">
+                                ×
+</button>
+                            <strong>Tips:</strong> 
+                            <p>
+            If you are clear about what personal information you want to collect, what needs to be noted is that you need to state the personal information you will collect in the study in the PIS in a concise and clear language. </p>
+                        </div>                         
+                        <div class="alert alert-dismissable alert-info" id="alert_no_personal" style="position: absolute; text-align: left; z-index:3">
+                            <button type="button" class="close" onclick="$('#alert_no_personal').hide();" aria-hidden="true">
+                                ×
+</button>
+                            <strong style="text-align: left;">Tips:</strong> 
+                            <p style="text-align: left;">If you are not sure about what kinds of personal information you need in your study, it would be better to click the term &ldquo;<b><u><i>personal information</i></u></b>&rdquo; in this question. The explanation here might be helpful. </p>
+                            <p style="text-align: left;"><br>
+    When you are clear about what personal information you want to collect, what needs to be noted is that you need to state the personal information you will collect in the study in the PIS in a concise and clear language.</p>
+                        </div>                         
+                        <div class="alert alert-dismissable alert-info" id="alert_yes_method" style="position: absolute; text-align: left; z-index:2"> 
+                            <button type="button" class="close" onclick="$('#alert_yes_method').hide();" aria-hidden="true">
+                                ×
+</button>
+                            <strong>Qualitative</strong> data collection includes:
+                            <li>Interview</li>
+                            <li>Focus groups</li>
+                            <li>Observations</li>
+                            <li>Oral histories</li>
+                        </div>                         
+                        <div class="alert alert-dismissable alert-info" id="alert_no_method" style="position: absolute; text-align: left; z-index:2"> 
+                            <button type="button" class="close" onclick="$('#alert_no_method').hide();" aria-hidden="true">
+                                ×
+</button>
+                            <strong>Quantitative</strong> data collection includes:
+                            <li>Documents and records</li>
+                            <li>Questionnaires and surveys</li>
+                        </div>
+                        <div class="alert alert-dismissable alert-info" id="alert_yes_store" style="position: absolute; text-align: left; z-index:1"> 
+                            <button type="button" class="close" aria-hidden="true" onclick="$('#alert_yes_store').hide();">
+                                ×
+</button>
+                            <strong>Tips:</strong> 
+                            <p>Data storage needs to strictly comply with the requirements of GDPR, and do its utmost to protect participants&apos; information security. <br>
+            Get more information about  <a href="http://web.inf.ed.ac.uk/infweb/research/ethics-and-integrity/ethics-gdpr">GDPR</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 order-md-1 text-left w-auto">
+                        <form class="needs-validation" novalidate="">
+                            <div class="mb-3">
+                                <label for="compensation">
+                                    <span style="font-weight: normal;">1. Do you collect </span>
+                                    <span style=""><i><u data-pg-ia="{&quot;l&quot;:[{&quot;trg&quot;:&quot;click&quot;,&quot;a&quot;:&quot;fadeIn&quot;,&quot;t&quot;:&quot;$#alert_personal&quot;}]}">personal information</u></i></span>
+                                    <span style="font-weight: normal;"> of participants?&nbsp;</span>
+                                    <div class="audi_personal" id="audi_personal">
+                                        <div class="custom-control custom-radio"> 
+                                            <input id="yes_personal" name="personalradio" type="radio" class="custom-control-input" value="1"> 
+                                            <label class="custom-control-label" for="yes_personal" style="font-weight: normal;">Yes</label>                                             
+                                        </div>
+                                        <div class="custom-control custom-radio"> 
+                                            <input id="no_personal" name="personalradio" type="radio" class="custom-control-input" value="2"> 
+                                            <label class="custom-control-label" for="no_personal" style="font-weight: normal;">No</label>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="method">
+                                    <span style="font-weight: normal;">2. What is your method of data collection?</span>
+                                    <div class="audi_method" id="audi_method">
+                                        <div class="custom-control custom-radio"> 
+                                            <input id="yes_method" name="methodradio" type="radio" class="custom-control-input" value="1"> 
+                                            <label class="custom-control-label" for="yes_method" style="font-weight: normal;">Qualitative data collection</label>
+                                        </div>
+                                        <div class="custom-control custom-radio"> 
+                                            <input id="no_method" name="methodradio" type="radio" class="custom-control-input" value="2"> 
+                                            <label class="custom-control-label" for="no_method" style="font-weight: normal;">Quantitative data collection</label>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="store">
+                                    <span style="font-weight: normal;">3. Are you clear how to store the data you collect?</span>
+                                    <div class="audi_store" id="audi_store">
+                                        <div class="custom-control custom-radio"> 
+                                            <input id="yes_store" name="storeradio" type="radio" class="custom-control-input" value="1"> 
+                                            <label class="custom-control-label" for="yes_store" style="font-weight: normal;">Yes</label>                                             
+                                        </div>
+                                        <div class="custom-control custom-radio"> 
+                                            <input id="no_store" name="storeradio" type="radio" class="custom-control-input" value="2"> 
+                                            <label class="custom-control-label" for="no_store" style="font-weight: normal;">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-dismissable alert-info text-left" id="alert_no_store" style="position: absolute; z-index:999;"> 
+                                        <button type="button" class="close" onclick="$('#alert_no_store').hide();" aria-hidden="true">
+                                            ×
+</button>
+                                        <strong>Tips:</strong> 
+                                        When you think about how to store the data you collect, you need to pay attention to the following points:
+                                        <ol>
+                                            <li>
+                                                <b>Encrypting data:</b>
+                                            </li>
+                                            Personal data used for research should be encrypted for the entire period it is held. This includes:
+                                            <ul>
+                                                <li>Data at rest: Data held on storage media or computing devices should be protected to prevent unauthorised access. Protection measures should be applied to *ALL* copies of the data, including those held on back-up media.</li>
+                                                <li>Data in motion: Data being transferred from location A to location B should be encrypted to prevent it being intercepted and accessed. This covers electronic transfer (e-mail, FTP, etc.) and physical transmission (e.g. sending a USB drive through the post).</li>
+                                            </ul>
+                                            <li>
+                                                <b>Active data storage:</b>
+                                            </li>                                                                                                                                                                                                                                                                                        The University offers a number of options for storage of data during your research project.
+                                            <ul>
+                                                <li>DataStore is the central, backed-up University system that can hold your research data, either in your own private drive or in a shared drive with a research group.</li>
+                                                <li>OneDrive is a Microsoft managed file space that is offered as part of Office365.</li>
+                                                <li>Other options for storing active research data include the University wiki, Sharepoint and electronic laboratory notebooks such as RSpace.</li>
+                                            </ul>
+                                            <li>
+                                                <b>Storage for sensitive data:</b>
+                                            </li>                                                                                                                                                                                                                                                                                        The University&rsquo;s Data Safe Haven is a highly secure server and analysis environment for projects requiring additional security measures. This may be due to the use of data considered to be sensitive, including the special categories of personal data. In most cases there is a charge for use.
+                                            <br>
+                                            <br>
+                                        </ol>
+                                        <ol>
+                                            <b><span>Note</span></b>: Please contact the IS Helpline at your earliest convenience if you plan to use the Data Safe Haven in your research project.
+                                            <a href="https://www.ed.ac.uk/information-services/help-consultancy/contact-helpline">https://www.ed.ac.uk/information-services/help-consultancy/contact-helpline</a>&nbsp;
+                                        </ol>
+                                        <ol>
+                                            <b>Tips: </b>
+                                            <br>
+                                            If you are clear how to store your data, data storage needs to strictly comply with the requirements of GDPR, and do its utmost to protect participants&apos; information security.
+                                            Get more information about 
+                                            <a href="http://web.inf.ed.ac.uk/infweb/research/ethics-and-integrity/ethics-gdpr">GDPR</a>.
+                                        </ol>
+                                    </div>
+                                </label>
+                            </div>
+                            <script>
+                                $("#alert_yes_personal").hide();
+                                $("#alert_no_personal").hide();
+                                // $("#compensation_input").hide();
+                                $("#alert_yes_method").hide();
+                                $("#alert_no_method").hide();
+                                // $("#benefit_input").hide();
+                                $("#alert_yes_store").hide();
+                                $("#alert_no_store").hide();
+                                // $("#risk_input").hide();
+                                //$(".audi").change(function() {
+                                $("#audi_personal").change(function() {
+                                    var val = $('input:radio[name="personalradio"]:checked').val();
+                                    console.log(val);
+                                    if(val == 1) {
+                                //         $("#compensation_input").show();
+                                        $("#alert_yes_personal").show();
+                                        $("#alert_no_personal").hide();
+                                    } else if(val == 2) {
+                                //         $("#compensation_input").hide();
+                                        $("#alert_no_personal").show();
+                                        $("#alert_yes_personal").hide();
+                                    }
+                                })
+                                //$(".audi").change(function() {
+                                $("#audi_method").change(function() {
+                                    var val = $('input:radio[name="methodradio"]:checked').val();
+                                    console.log(val);
+                                    if(val == 1) {
+                                //         $("#benefit_input").show();
+                                        $("#alert_yes_method").show();
+                                        $("#alert_no_method").hide();
+                                    } else if(val == 2) {
+                                //         $("#benefit_input").hide();
+                                        $("#alert_no_method").show();
+                                        $("#alert_yes_method").hide();
+                                    }
+                                })
+                                $("#audi_store").change(function() {
+                                    var val = $('input:radio[name="storeradio"]:checked').val();
+                                    console.log(val);
+                                    if(val == 1) {
+                                //         $("#risk_input").show();
+                                        $("#alert_yes_store").show();
+                                        $("#alert_no_store").hide();
+                                    } else if(val == 2) {
+                                //         $("#risk_input").hide();
+                                        $("#alert_no_store").show();
+                                        $("#alert_yes_store").hide();
+                                    }
+                                })
+                            </script>
+                        </form>
+                        <div class="mb-3">
+                            <label for="happen">
+                                <span style="font-weight: normal;">4. What will happen to the results of this study? </span>
+                            </label>
+                            <ul class="nav nav-tabs" role="tablist"> 
+                                <li class="nav-item"> 
+                                    <a class="active nav-link" href="#tab1" data-toggle="tab" role="tab" aria-controls="tab1" aria-expanded="true">Explanation</a> 
+                                </li>                                 
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="#tab2" data-toggle="tab" role="tab" aria-controls="tab2" aria-expanded="true">Example 1</a> 
+                                </li>                                 
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="#tab3" data-toggle="tab" role="tab" aria-controls="tab3" aria-expanded="true">Example 2</a> 
+                                </li>                                 
+                                <!-- <li class="nav-item"> 
+                                    <a class="nav-link" href="#tab4" data-toggle="tab" role="tab" aria-controls="tab4" aria-expanded="true">Example 3</a> 
+                                </li>                                  -->
+                            </ul>
+                            <div class="tab-content">
+                                <div class="active tab-pane" role="tabpanel" aria-labelledby="tab1-tab" id="tab1">
+                                    <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">This section details what will be involved in your research study from a participant&rsquo;s point of view, and in the order they will experience it. If there are multiple study visits, describe them in turn.<br>
+It would be better if you can clear what kind of data being collecting, means of collection, duration of session, data storage and how often, where and when your study will take place.</p>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" aria-labelledby="tab2-tab" id="tab2">
+                                    <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">We will ask you to install the Unicorn+ app on your personal Android or iPhone device and use it to generate Unicorn images. You will be provided with several pictures of Unicorns and asked to use the app to generate similar looking Unicorns and then use the app to email your generated Unicorns to the researcher&rsquo;s email address. At the end of the study we will as you to provide some demographic information including age, gender, and if you are a student. We will also help you uninstall the app from your device.
+The study uses a special app version that automatically collects basic information about your device such as its model number the app also records the settings you use to create Unicorns. <br>
+                With your consent, we will audio and video record the session using an IPhone. If at any point you feel uncomfortable, you can ask me to stop the audio/video recording , or state that you do not want something specific quoted. </p>
+                                </div>
+                                <!-- <div class="tab-pane" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
+                                    <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">We will ask you to install the Unicorn+ app on your personal Android or iPhone device and use it to generate Unicorn images. You will be provided with several pictures of Unicorns and asked to use the app to generate similar looking Unicorns and then use the app to email your generated Unicorns to the researcher&rsquo;s email address. At the end of the study we will as you to provide some demographic information including age, gender, and if you are a student. We will also help you uninstall the app from your device.
+The study uses a special app version that automatically collects basic information about your device such as its model number the app also records the settings you use to create Unicorns.
+With your consent, we will audio and video record the session using an IPhone. If at any point you feel uncomfortable, you can ask me to stop the audio/video recording , or state that you do not want something specific quoted.<br>
+2. The results of this study may be summarised in published articles, reports and presentations. Quotes or key findings will be anonymized: We will remove any information that could, in our assessment, allow anyone to identify you. With your consent, information can also be used for future research. Your forwarded emails and archived data will be retained in the research inbox for a minimum of 2 years.</p>
+                                </div> -->
+                                <div class="tab-pane" role="tabpanel" aria-labelledby="tab3-tab" id="tab3">
+                                    <p class="border ml-auto pb-2 pl-4 pr-4 pt-2 text-justify">You will be included as a member of the focus group. We will ask you to participate in a group discussion focus on your experience with writing participant information sheets. We will be asking several questions to guide the discussion which are aimed at understanding the process of writing a participant information sheet. Including what elements of the process were easy as well as those that were more challenging.  <br>
+Due to the impact of the epidemic, we will hold these discussions using an online meeting platform like Microsoft Teams. With your consent, the video and audio of the interview will be preserved by recording. All recordings will be saved on a password-protected encrypted computer locally. Though they may also be stored on Teams itself temporarily as part of the recording process. If at any point you feel uncomfortable, you can ask me to stop the recording or state that you do not want something specific quoted.</p>
+                                </div>
+                            </div>
+                            <h5>Start your writing here:</h5>
+                            <textarea cols="" rows="3" id="happen" class="w-100"></textarea> 
+                        </div>
+                        <style type="text/css">textarea, .pg-node-id-1, .pg-file-cs-6 { border: 1px solid #a0b3d6; overflow: auto; min-height: 30px; max-height: 500px; padding: 0; outline: none; background-color: #fff; resize: none; margin-top: 0px; width: 708px; }</style>
+                        <script>
+                            var observe;
+                            if (window.attachEvent) {
+                                observe = function (element, event, handler) {
+                                    element.attachEvent('on'+event, handler);
+                                };
+                            }
+                            else {
+                                observe = function (element, event, handler) {
+                                    element.addEventListener(event, handler, false);
+                                };
+                            }
+                            function init () {
+                                var text =document.getElementById('text');
+                                function resize () {
+                                    text.style.height = 'auto';
+                                    var vHeight= text.scrollHeight + 2;
+                                    text.style.height =vHeight +'px';
+                                }
+                                /* 0-timeout to get the already changed text */
+                                function delayedResize () {
+                                    window.setTimeout(resize, 0);
+                                }
+                                observe(text, 'change',  resize);
+                                observe(text, 'cut',     delayedResize);
+                                observe(text, 'paste',   delayedResize);
+                                observe(text, 'drop',    delayedResize);
+                                observe(text, 'keydown', delayedResize);
+
+                                text.focus();
+                                text.select();
+                                resize();
+                            }
+                        </script>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 order-md-2" style="color: #1e3359; font-family: 'Archivo Black', sans-serif; text-align: left;">
+                    <input type="button" value="Get Latex Code" onclick="getCode()" class="form-control-sm">              
+                 </div>
+                    <textarea cols="1" class="w-100" id="texcode" style="font-size: 10px; font-family: 'Amiri', serif;" rows="36"></textarea>
+                    <button id="save" type="button" class="btn btn-block btn-lg btn-primary float-right w-25" onclick="rmCookies()"  style="background-color: #18335c; font-family: 'Archivo Black', sans-serif; position: static;">Download</button>
+                
+                <script>
+                    // function getCode(){
+                    //     var obj={
+                    //             resultContent: document.getElementById("results").value,
+                    //             purposeContent: document.getElementById("purpose").value,
+                    //             reasonContent: document.getElementById("reason").value,
+                    //             happenContent: document.getElementById("happen").value
+                    //             }
+                    //     var str = `hahaha ${obj.happenContent}`
+                    //     document.getElementById("texcode").innerHTML = str;
+                    //     // $.cookie('userData' , JSON.stringify(obj));
+                    // }
+                    function getCode(){
+                        var happen_content = document.getElementById("happen").value;
+                        var str = `\\documentclass\{article\}\n\\usepackage\[utf8\]\{inputenc\}\n\\usepackage{geometry}\n\\geometry{a4paper,scale=0.8}\n\\usepackage{eso-pic}\n\\usepackage{graphicx}\n\\begin{document}\n\\begingroup\n\\thispagestyle{empty}\n\\AddToShipoutPicture*{%\n\\AtTextUpperLeft{%\n\\put\(-30\,-35\)\{\includegraphics\[scale\=0.4\]\{InformaticsUni\_CMYK\.png\}\}\%\n\}\%\n\}\n\\raggedleft\\\vspace\*\{0\.5cm\}\n\\endgroup\n\\noindent\n\\section\*\{Participant Information Sheet\}\n\\begin\{table\}\[h\]\n\\begin\{tabular\}\[width\=0\.6\\textwidth\]\{\|l\|l\|\}\n\\hline\nProject title\:             \& \[\[projectTitle\]\]\\hspace\{11\.4cm\} \\\\ \\hline\nPrincipal investigator\:     \& \[\[piName\]\] \\\\ \\hline\nResearcher collecting data\: \& \[\[userName\]\] \\\\ \\hline\nFunder \(if applicable\)\:      \& \[\[funderName\]\] \\\\ \\hline\n \\end\{tabular\}\n\\end\{table\}\nThis study was certified according to the Informatics Research Ethics Process\, RT number \[\[rtNumber\]\]\. Please take time to read the following information carefully\. You should keep this page for your records.\n\\subsection\*\{Who are the researchers\?\}\nThe research team who will have access to the data collected in this project includes the principal investigator Dr\. \[\[piName]] and the researcher \[\[userName\]\]\.\n\\subsection\*\{What is the purpose of the study\?\}\n${purpose_content}\n\\subsection\*\{Why have I been asked to take part\?\}\n${reason_content}\n\\subsection\*\{Do I have to take part\?\}\nNo \– participation in this study is entirely up to you\. You can withdraw from the study at any time\, without giving a reason\. Your rights will not be affected\. If you wish to withdraw\, contact the PI\. We will stop using your data in any publications or presentations submitted after you have withdrawn consent\. However\, we will keep copies of your original consent\, and of your withdrawal request\.\n\\subsection\*\{What will happen if I decide to take part\?\}${happen_content}\n\\subsection\*\{Compensation\. \[only required if applicable\]\}\n${compensation_content}\n\\subsection\*\{Are there any risks associated with taking part\?\}\n${risk_content}\n\\subsection\*\{Are there any benefits associated with taking part\?\}\n${benefit_content}\n\\subsection\*\{What will happen to the results of this study\?\}\n${result_content}\n\\subsection\*\{Data protection and confidentiality\.\}\nData protection and confidentiality\. Your data will be processed in accordance with Data Protection Law\. All information collected about you will be kept strictly confidential\. Your data will be referred to by a unique participant number rather than by name \[amend as appropriate\]\. Your data will only be viewed by the researcher\/research team \[name everyone who will access the data here\, including any research support staff who have access\]\. All electronic data will be stored on a password\-protected encrypted computer\, on the School of Informatics\’ secure file servers\, or on the University\’s secure encrypted cloud storage services \(DataShare\, ownCloud\, or Sharepoint\) and all paper records will be stored in a locked filing cabinet in the PI\’s office\. Your consent information will be kept separately from your responses in order to minimise risk\.\n\\subsection\*\{What are my data protection rights\?\}\nThe University of Edinburgh is a Data Controller for the information you provide \[amend if student PI\]\.  You have the right to access information held about you\. Your right of access can be exercised in accordance Data Protection Law\. You also have other rights including rights of correction\, erasure and objection\. \[make restrictions clear if e\.g\. accessing data would affect outcome of study\] For more details\, including the right to lodge a complaint with the Information Commissioner\’s Office\, please visit www\.ico\.org\.uk\. Questions\, comments and requests about your personal data can also be sent to the University Data Protection Officer at dpo\@ed\.ac\.uk\.\n\\subsection\*\{Who can I contact\?\}\n If you have any further questions about the study\, please contact the lead researcher\, \[\[piname\]\]\(\[\[piemail\]\]\) and the researcher \[\[username\]\]\(\[\[useremail\]\]\)\.If you wish to make a complaint about the study\, please contact inf\-ethics\@inf\.ed\.ac\.uk\. When you contact us\, please provide the study title and detail the nature of your complaint\.\n\\subsection\*\{Updated information\.\}\nIf the research project changes in any way\, an updated Participant Information Sheet will be made available on https\:\/\/web\.inf\.ed\.ac\.uk\/infweb\/research\/study\-updates\.\n\\subsection\*\{Alternative formats\.\}\nTo request this document in an alternative format\, such as large print or on coloured paper\, please contact \[insert contact name and contact details such as email\]\.\n\\subsection\*\{General information\.\}\nFor general information about how we use your data\, go to\: edin\.ac\/privacy\-research\.\n\\end\{document\}\n`;
+                       
+                        document.getElementById("texcode").innerHTML = str;
+                    }
+                    function rmCookies(){
+                        var str = document.cookie; 
+                        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        var date = new Date(); 
+                        date.setTime(date.getTime() - 10000); 
+                        document.cookie = str + "=a; expires=" + date.toGMTString(); 
+                    } 
+                </script>                 
+                <!-- save the latex file -->
+                <script>
+                    document.querySelector("#save").addEventListener('click', saveFile);
+                    function fakeClick(obj) {
+                        var ev = document.createEvent("MouseEvents");
+                        ev.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                        obj.dispatchEvent(ev);
+                    }
+
+                    function exportRaw(name, data) {
+                        var urlObject = window.URL || window.webkitURL || window;
+                        var export_blob = new Blob([data]);
+                        var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a")
+                        save_link.href = urlObject.createObjectURL(export_blob);
+                        save_link.download = name;
+                        fakeClick(save_link);
+                    }
+
+                    function saveFile(){
+                        var inValue  = document.querySelector("#texcode").value;
+                        exportRaw('PIS_latex_code.tex', inValue);
+                    }
+                </script>
+                
+            </div>
+        </div>
+    </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="pgia/lib/pgia.js"></script>
+    </body>
+</html>

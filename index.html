@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" class="float-none">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Introduction</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="form-validation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap">
+        <script>/* Pinegrow Interactions, do not remove */ try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id')?document.documentElement.hasAttribute('data-pg-mobile'):(screen.width<1000&&screen.height<1000)){pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}';}else{pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}';}style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}</script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../jquery-3.5.1.js"></script>
+        <link rel="stylesheet" href="../sidebarstyle.css">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Introduction</a>
+            <h2>Create Your PIS</h2>
+            <ul>
+                <li>
+                    <a href="CustomInformation.html">Custom Information</a>
+                </li>
+                <li>
+                    <a href="DataInformation.html">Data Information</a>
+                </li>
+            </ul>
+            <a href="http://web.inf.ed.ac.uk/infweb/research/ethics-and-integrity/ethics-procedure" target="_blank">Ethics procedure</a>
+            <a href="PISTemplates.html">Original Templates</a>
+            <a href="Examples.html">More Examples</a>
+            <a href="javascript:history.go(-1)">Back to previous page</a> 
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <script type="text/javascript">
+            /*打开侧栏，修改侧栏宽度，主体左跨度、背景透明度*/
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                    document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+                }
+                /*关闭侧栏，恢复原始侧栏宽度，主体左跨度、背景透明度*/
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "auto";
+                document.body.style.backgroundColor = "white";
+                }
+            </script>
+        <script>
+                $(function(){
+                    $('.sidenav h2').on('click', function(){
+                        $(this).next('ul').toggleClass('active')
+                    })
+                })
+            </script>
+        <div id="main">
+            <div class="bg-white container w-75">
+                <img src="InformaticsUni_CMYK.png" width="600">
+                <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5; text-align: center;">Introduction</h2>
+                <h4>
+        Introduction of this website </h4>
+                <p>
+    This web page provides pages to help write PIS and related resources that may be needed to write PIS. The following is a brief introduction to the use of the website. </p>
+                <div class="card-group"> 
+                    <div class="card"> 
+                        <img class="card-img-top" src="../img/intro.jpg" alt="Card image cap"> 
+                        <div class="card-body"> 
+                            <h4 class="card-title">Sidebar</h4> 
+                            <p class="card-text">Click the sidebar button to see all the information provided by the website. You can choose the content you want to browse freely.</p> 
+                        </div>                         
+                    </div>                     
+                    <div class="card"> 
+                        <img class="card-img-top" src="../img/intro2.png" alt="Card image cap"> 
+                        <div class="card-body"> 
+                            <h4 class="card-title">Create Your PIS</h4> 
+                            <p class="card-text">In the Create Your PIS section, you can browse and fill in the required content in the two web pages provided in sequence.</p> 
+                        </div>                         
+                    </div>                     
+                </div>
+                <div class="card-group"> 
+                    <div class="card"> 
+                        <img class="card-img-top" src="../img/intro3.png" alt="Card image cap"> 
+                        <div class="card-body"> 
+                            <h4 class="card-title">Get Your Latex Code</h4> 
+                            <p class="card-text">Click the "Get Latex Code" button to view your personal Latex code for the PIS.</p> 
+                        </div>                         
+                    </div>                     
+                    <div class="card"> 
+                        <img class="card-img-top" src="../img/intro4.png" alt="Card image cap"> 
+                        <div class="card-body"> 
+                            <h4 class="card-title">Download Your Latex Code</h4> 
+                            <p class="card-text">Click the "Download" button to download the tex file.</p> 
+                        </div>                         
+                    </div>                     
+                </div>
+                <a class="btn btn-block btn-lg btn-primary float-right w-25" style="background-color: #18335c; font-family: 'Archivo Black', sans-serif; position: static;" href="CustomInformation.html">START MY PIS</a>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="pgia/lib/pgia.js"></script>
+    </body>
+    <p></p>

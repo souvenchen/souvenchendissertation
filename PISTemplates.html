@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" class="float-none">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Introduction</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="form-validation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap">
+        <script>/* Pinegrow Interactions, do not remove */ try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id')?document.documentElement.hasAttribute('data-pg-mobile'):(screen.width<1000&&screen.height<1000)){pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}';}else{pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}';}style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}</script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../jquery-3.5.1.js"></script>
+        <link rel="stylesheet" href="../sidebarstyle.css">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Introduction</a>
+        <h2>Create Your PIS</h2>
+        <ul>
+            <li><a href="CustomInformation.html">Custom Information</a></li>
+            <li><a href="DataInformation.html">Data Information</a></li>
+        </ul>
+        <a href="http://web.inf.ed.ac.uk/infweb/research/ethics-and-integrity/ethics-procedure" target="_blank">Ethics procedure</a>
+        <a href="PISTemplates.html">Original Templates</a>
+        <a href="Examples.html">More Examples</a>
+        <a href="javascript:history.go(-1)">Back to previous page</a>  
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <script type="text/javascript">
+        /*打开侧栏，修改侧栏宽度，主体左跨度、背景透明度*/
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+            }
+            /*关闭侧栏，恢复原始侧栏宽度，主体左跨度、背景透明度*/
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "auto";
+            document.body.style.backgroundColor = "white";
+            }
+        </script>
+         <script>
+            $(function(){
+                $('.sidenav h2').on('click', function(){
+                    $(this).next('ul').toggleClass('active')
+                })
+            })
+        </script>
+    <div id="main">
+        <div class="bg-white container w-75">
+            <img src="InformaticsUni_CMYK.png" width="600">
+            <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5; text-align: center;">Templates</h2>
+            <h4>Participant Information Sheets (PIS)</h4>
+            <p>
+    A participant information sheet (PIS) should be prepared for any project involving human participants. You must seek consent to collect data from your participants. Consent must be voluntary, informed, and made by someone who is in the capacity to make such decisions (e.g. not a child). The PIS serves to inform the participant of what they are consenting to, and the below template should be completed with care. </p>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/20200625_pis_informatics.docx" download> PIS Informatics (86.81 KB Word)</a>
+            <p>
+    For projects where the participants are children or young adults, you should provide a participant information sheet to the parent/guardian and outline how you will also explain the study to the young participant.  Note that the child PIS should generally be read aloud to the child, rather than given to them to read. The templates below should be used for such projects.</p>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/20200505_parent_pis_informatics.docx" download>Parent PIS Informatics (87.77 KB Word)</a>
+            <br>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/20200505_child_pis_informatics.docx" download>Child PIS Informatics (84.88 KB Word)</a>
+            <h4>
+Participant consent form</h4>
+            <p>The participant consent form should be completed by all participants consenting to take part in your project. The consent form should only be completed by the participant <b>after </b>they have read the relevant PIS. The relevant fields of the consent form (participant number, project title, principal investigator) should be completed by the researcher collecting the data before the consent form is passed to the participant for completion. Once signed and dated by the participant, it should be counter-signed by the researcher collecting the data.</p>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/190313_participant_consent_form_informatics.docx" download>Informatics participant consent form (Word) (81.68 KB Word)</a>
+            <br>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/190313_participant_consent_form_informatics.pdf" download>Informatics participant consent form (PDF) (42.23 KB PDF)</a>
+            <p>
+For projects where the participants are children or young adults, you should obtain consent from the parent/guardian and the child. The parent/guardian should be asked to complete and sign a written consent form, whereas verbal consent may be more appropriate for young children. If written consent can meaningfully be sought from the child participant, then the child participant consent form template should be used.</p>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/20200505_parent_consent_informatics.docx" download>Informatics parent consent form (82.98 KB Word)</a>
+            <br>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/20200505_child_consent_informatics.docx" download>Informatics child participant consent form (82.15 KB Word)</a>
+            <h4>
+Online research participant information sheet (PIS) and consent form</h4>
+            <p>
+For projects where data collection is done completely online, use the combined PIS and consent form as the first page (or screens) of your survey/ online study. As with in-person data collection, you must always seek consent before collection data from your particpants, and you need to ensure they can review the PIS before completing your online survey. This information sheet template is meant for online survey-like studies or online behavioural tasks and cannot be used for online interviews or for in-person studies.</p>
+            <a href="http://web.inf.ed.ac.uk/sites/default/files/atoms/files/20200612_online_pis_informatics.docx">Informatics online PIS (87.86 KB Word)</a>
+        </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="pgia/lib/pgia.js"></script>
+    </body>
+    <p></p>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" class="float-none">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>PIS helper</title>
+        <!-- Text styles for this template -->
+        <link href="css.css" rel="stylesheet" type="text/css"> 
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="form-validation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap">
+        <script>/* Pinegrow Interactions, do not remove */ try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id')?document.documentElement.hasAttribute('data-pg-mobile'):(screen.width<1000&&screen.height<1000)){pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}';}else{pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}';}style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}</script>
+        <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://code.changer.hk/jquery/plugins/jquery.cookie.js"></script>
+        <script src="../jquery-3.5.1.js"></script>
+        <script>
+            function validateForm(){
+
+                var _projectname=document.forms["myForm"]["projectname"].value;
+                if (_projectname==null || _projectname==""){
+                    alert("Your project name is required.");
+                    return false;
+                }
+                
+                var _username=document.forms["myForm"]["username"].value;
+                if (_username==null || _username==""){
+                    alert("Your name is required.");
+                    return false;
+                }
+                
+                var _useremail=document.forms["myForm"]["useremail"].value;
+                if (_useremail==null || _useremail==""){
+                    alert("Your email is required.");
+                    return false;
+                }
+                
+
+                var _piname=document.forms["myForm"]["piname"].value;
+                if (_piname==null || _piname==""){
+                    alert("Your PI name is required.");
+                    return false;
+                }
+                
+                var _piemail=document.forms["myForm"]["piemail"].value;
+                if (_piemail==null || _piemail==""){
+                    alert("Your PI's email is required.");
+                    return false;
+                }
+                
+
+                var _datacollecter=document.forms["myForm"]["datacollecter"].value;
+                if (_datacollecter==null || _datacollecter==""){
+                    alert("Data collecter's name is required.");
+                    return false;
+                }
+
+                var _rtnumber=document.forms["myForm"]["rtnumber"].value;
+                if (_rtnumber==null || _rtnumber==""){
+                    alert("Your RT number is required.");
+                    return false;
+                }
+
+                var atpos=_useremail.indexOf("@");
+                var dotpos=_useremail.lastIndexOf(".");
+                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+                    alert("Unvalid Email address.");
+                    return false;
+                }
+
+                var atpos=_piemail.indexOf("@");
+                var dotpos=_piemail.lastIndexOf(".");
+                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+                    alert("Unvalid Email address.");
+                    return false;
+                }
+            
+            }
+          </script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri&display=swap">
+        <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <title></title>
+            <script type="text/javascript">
+                function Go() {
+                    window.location.href="Handler1.ashx?obj"
+        } -->
+    </script>
+    <link rel="stylesheet" href="../sidebarstyle.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2>用户管理</h2>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <script>
+        $(function(){
+            $('.sidenav h2').on('click', function(){
+                $(this).next('ul').toggleClass('active')
+            })
+        })
+    </script>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <script type="text/javascript">
+        /*打开侧栏，修改侧栏宽度，主体左跨度、背景透明度*/
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+            /*关闭侧栏，恢复原始侧栏宽度，主体左跨度、背景透明度*/
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+            }
+        </script>
+    <div class="bg-white container h-50 overflow-auto w-75">
+        <img src="InformaticsUni_CMYK.png" width="600">
+        <div class="py-5 text-center">
+            <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5;">Rough Information of Project</h2>
+            <p class="font-weight-light lead text-justify text-white" style="border-left: 25px solid; border-right: 25px solid; background-color: rgba(255, 255, 255, 0); color: #000000;"><i class="font-italic text-muted">In this part, you need to fill in basic information about your project, such as <b>project title</b>, <b>researcher information</b>, <b>RT number</b>, etc. In addition, we provide <b>examples</b> for every question in the blank space for your reference.</i><br></p>
+            <h2 style="font-family: 'Archivo Black', sans-serif; background-color: #0f3260; color: #e5e5e5;">&nbsp; &nbsp;&nbsp;</h2>
+            <div class="row w-100">
+                <div class="col-lg-6 col-md-8 order-md-1 text-left w-auto">
+                    <form name="myForm" class="needs-validation" novalidate="" onsubmit="return validateForm()">
+                        <div class="mb-3">
+                            <label for="projectname">1. What is your project title ?</label>
+                            <input type="text" class="form-control" id="projectname" placeholder="e.g. My first project" required="">
+                            <label for="username">2. What is your name ?</label>
+                            <input type="text" class="form-control" id="username" placeholder="e.g. John Smith" required="">
+                            <label for="useremail">3. What is your E-mail address ?</label>
+                            <input type="email" class="form-control" id="useremail" placeholder="you@example.com" required=""> 
+                            <label for="piname">4. Who is your principal investigator ?</label>
+                            <input type="text" class="form-control" id="piname" placeholder="e.g. John Smith" required="">
+                            <label for="piemail"> 5. What is your principal investigator&apos;s E-mail address ? </label>
+                            <input type="email" class="form-control" id="piemail" placeholder="principal_investigator@example.com" required="">
+                            <label for="datacollecter">6. Who is the researcher collecting data ?</label>
+                            <input type="text" class="form-control" id="datacollecter" placeholder="e.g. John Smith" required="">
+                            <label for="funder">7. Who is your funder ?
+                                <span class="text-muted">(Optional)</span>
+                            </label>
+                            <input type="text" class="form-control" id="funder" placeholder="e.g. John Smith">
+                            <label for="rtnumber">8. What is your RT number ?</label>
+                            <input type="text" class="form-control" id="rtnumber" placeholder="e.g. 2019/12345" required="">
+                            <input type="submit" value="Check the format">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 mb-4 order-md-2" style="color: #1e3359; font-family: 'Archivo Black', sans-serif; text-align: left;">
+                    <h4 class="align-items-center d-flex justify-content-between mb-3"> <input type="button" value="Get Latex Code" onclick="getValue()" class="form-control-sm"><p><span class="text-muted"><br></span></p> </h4>
+                    <textarea cols="1" class="w-100" id="demo" style="font-size: 10px; font-family: 'Amiri', serif;" rows="36"></textarea> 
+                    <button id="save" type="button">Download</button>
+                    <script>
+                                document.querySelector("#save").addEventListener('click', saveFile);
+                                function fakeClick(obj) {
+                                    var ev = document.createEvent("MouseEvents");
+                                    ev.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                                    obj.dispatchEvent(ev);
+                                }
+
+                                function exportRaw(name, data) {
+                                    var urlObject = window.URL || window.webkitURL || window;
+                                    var export_blob = new Blob([data]);
+                                    var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a")
+                                    save_link.href = urlObject.createObjectURL(export_blob);
+                                    save_link.download = name;
+                                    fakeClick(save_link);
+                                }
+
+                                function saveFile(){
+                                    var inValue  = document.querySelector("#demo").value;
+                                    exportRaw('test.tex', inValue);
+                                }
+                        </script>
+                </div>                 
+                <script>
+                        function getValue(){
+                            var obj={
+                                    projectName: document.getElementById("projectname").value,
+                                    userName: document.getElementById("username").value,
+                                    userEmail: document.getElementById("useremail").value,
+                                    piName: document.getElementById("piname").value,
+                                    piEmail: document.getElementById("piemail").value,
+                                    dataCollecter: document.getElementById("datacollecter").value,
+                                    funderName: document.getElementById("funder").value,
+                                    rtNumber: document.getElementById("rtnumber").value
+                                    // resultContent: document.getElementById("results").value,
+                                    // purposeContent: document.getElementById("purpose").value,
+                                    // reasonContent: document.getElementById("reason").value,
+                                    // happenContent: document.getElementById("happen").value
+                                    }
+                            var str=`\\documentclass\{article\}\n\\usepackage\[utf8\]\{inputenc\}\n\\usepackage\{geometry\}\n\\geometry\{a4paper\,scale\=0\.8\}\n\\usepackage\{eso-pic\}\n\\usepackage\{graphicx\}\n\\begin\{document\}\\\begingroup\n\\thispagestyle\{empty\}\n\\AddToShipoutPicture\*\{\%\n\\AtTextUpperLeft\{\%\n\\put\(\-30\,\-35\)\{\\includegraphics\[scale\=0\.4\]\{InformaticsUni\_CMYK\.png\}\}\%\n\}\%\n\}\n\\raggedleft\n\\vspace\*\{0\.5cm\}\\\endgroup\\\noindent\n\\section\*\{Participant Information Sheet\}\n\\begin\{table\}\[h\]\n\\begin\{tabular\}\[width\=0\.6\\textwidth\]\{\|l\|l\|\}\n \\hline\n Project title\: \&  ${obj.projectName}\\hspace\{11\.4cm\} \\\\ \\hline \nPrincipal investigator\:\&  ${obj.piName}  \\hline \nResearcher collecting data\: \&  ${obj.dataCollecter} \\hline Funder \(if applicable\)\:      \& {3} \\\\ \\hline \n \\end\{tabular\} \n \\end\{table\} \nThis study was certified according to the Informatics Research Ethics Process\, RT number ${obj.rtNumber}\. Please take time to read the following information carefully\. You should keep this page for your records\.\n\\subsection\*\{Who are the researchers\?\}\nThe research team who will have access to the data collected in this project includes the principal investigator Dr\.${obj.piName}  and the researcher ${obj.userName}\.`
+                            document.getElementById("demo").innerHTML = str;
+                            $.cookie('userData' , JSON.stringify(obj));
+                        }
+                    </script>                 
+            </div>
+            <a class="btn btn-block btn-lg btn-primary float-right w-25" style="background-color: #18335c; font-family: 'Archivo Black', sans-serif; position: static;" href="CustomInformation.html" onclick="Go()">NEXT PAGE</a>
+        </div>
+        <div class="row w-100">
+</div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="pgia/lib/pgia.js"></script>
+</body>
